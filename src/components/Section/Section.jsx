@@ -6,14 +6,28 @@ import Grid from '@mui/material/Grid';
 function Section({type}) {
 
     const [albumdata, setalbumdata]=useState([])
-    
-    useEffect(()=>{
-      
-       async function getalbumdata(){
+    async function getalbumdata(){
         const response = await axios.get(`https://qtify-backend-labs.crio.do/albums/${type}`)
         setalbumdata(response.data)
        }
+
+    async function getsongs(){
+        const response = await axios.get(`https://qtify-backend-labs.crio.do/songs`)
+        setalbumdata(response.data)
+       }
+    
+    
+    useEffect(()=>{
+      
+      
+       if(type!=='songs'){
        getalbumdata()
+       }
+
+       if(type=='songs'){
+        getsongs()
+       }
+
       
 
     },[type])

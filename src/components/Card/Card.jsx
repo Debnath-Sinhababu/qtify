@@ -34,8 +34,8 @@ function Carditem({item}) {
           <Box sx={{ padding: 2 }}>
             <Typography variant="h5" sx={titleStyle}>{item.title}</Typography>
           </Box>
-            <Chip label={`${item.follows} follows`} sx={{borderRadius:10,padding:'4px, 8px, 4px, 8px',backgroundColor:'#121212',color:'white'}} />
-
+           { item.follows && <Chip label={`${item.follows} follows`} sx={{borderRadius:10,padding:'4px, 8px, 4px, 8px',backgroundColor:'#121212',color:'white'}} />
+}
         </Card>
   );
 }

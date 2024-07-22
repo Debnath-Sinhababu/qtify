@@ -10,6 +10,7 @@ function App() {
      <Hero/>
      <Section type='new'/>
      <Section type='top'/>
+     <Section type='songs'/>
     </div>
   );
 }
