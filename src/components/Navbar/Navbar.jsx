@@ -8,7 +8,7 @@ import styles from "./Navbar.module.css";
 function Navbar({ searchData }) {
   return (
     <nav className={styles.navbar}>
-      <Link to="/" style={{height:'40px'}}>
+      <Link to="/" style={{height:'60px'}}>
         <Logo />
       </Link>
       <Search
